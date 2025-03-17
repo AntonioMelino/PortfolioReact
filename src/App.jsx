@@ -1,10 +1,9 @@
-import NavBar from "./components/layouts/navbar/NavBar";
+import NavBar from "./components/layouts/navbar/Navbar";
 
 function App() {
   return (
     <div>
       <NavBar />
-      <h2>hola</h2>
     </div>
   );
 }
