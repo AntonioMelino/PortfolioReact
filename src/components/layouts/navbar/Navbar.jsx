@@ -10,6 +10,9 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 const pages = ["INICIO", "SOBRE MI", "CONOCIMIENTOS", "PROYECTOS", "CONTACTO"];
 
@@ -96,6 +99,7 @@ function Navbar() {
             pt: 2,
           }}
         >
+          {/* Texto "ANTONIO MELINO" con salto de línea */}
           <Typography
             variant="h6"
             noWrap
@@ -109,12 +113,15 @@ function Navbar() {
               color: "white",
               textDecoration: "none",
               mb: 2,
+              textAlign: "center", // Centrar el texto
             }}
           >
             ANTONIO
-            <br /> MELINO
+            <br />
+            MELINO
           </Typography>
 
+          {/* Botones de navegación */}
           <Box
             sx={{
               display: "flex",
@@ -131,13 +138,57 @@ function Navbar() {
                   my: 1,
                   color: "white",
                   width: "100%",
-                  justifyContent: "flex-start",
+                  justifyContent: "center",
                   pl: 3,
                 }}
               >
                 {page}
               </Button>
             ))}
+          </Box>
+
+          {/* Iconos de GitHub, LinkedIn y WhatsApp */}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              mt: "auto", // Empuja los iconos hacia abajo
+              mb: 4, // Margen inferior
+              gap: 1, // Espaciado entre iconos
+              color: "white",
+            }}
+          >
+            <IconButton
+              color="inherit"
+              aria-label="GitHub"
+              href="https://github.com/AntonioMelino"
+              target="_blank"
+              sx={{ fontSize: "60px" }} // Tamaño personalizado
+            >
+              <GitHubIcon fontSize="inherit" />{" "}
+              {/* Hereda el tamaño del IconButton */}
+            </IconButton>
+            <IconButton
+              color="inherit"
+              aria-label="LinkedIn"
+              href="https://www.linkedin.com/in/antonio-melino-82a885213/"
+              target="_blank"
+              sx={{ fontSize: "60px" }} // Tamaño personalizado
+            >
+              <LinkedInIcon fontSize="inherit" />{" "}
+              {/* Hereda el tamaño del IconButton */}
+            </IconButton>
+            <IconButton
+              color="inherit"
+              aria-label="WhatsApp"
+              href="https://wa.me/tunumero"
+              target="_blank"
+              sx={{ fontSize: "60px" }} // Tamaño personalizado
+            >
+              <WhatsAppIcon fontSize="inherit" />{" "}
+              {/* Hereda el tamaño del IconButton */}
+            </IconButton>
           </Box>
         </Box>
       )}
